@@ -29,3 +29,42 @@ Em conformidade com as instruções recebidas e aderindo ao padrão TDD, inicial
         }
     
     }
+
+
+## Identificando as falhas, foi elaborada a classe LoginScreen, empregando os métodos da LoginScreenTest, seguida pela realização de testes na referida classe.
+
+            package LoginScreenTest;
+            
+            
+            import java.util.HashMap;
+            import java.util.Map;
+            
+            
+            public class LoginScreen {
+            	
+                private Map<String, String> userDatabase;
+            
+               
+                public LoginScreen(){
+                    userDatabase = new HashMap<>();
+                    userDatabase.put("john", "password123");
+                    userDatabase.put("alice", "securepass");
+                }
+            
+            
+                public boolean login(String username, String password) {
+                    if(userDatabase.containsKey(username)){
+                        String storedPassword = userDatabase.get(username);
+                        if(storedPassword.equals(password)){
+                            return true; // Sucesso na verificacao
+                        }
+            
+                    }
+                    return false; // Falha na verificacao
+                }
+            
+               
+                public void addUser(String username, String password){
+                    userDatabase.put(username, password);
+                }
+            }
