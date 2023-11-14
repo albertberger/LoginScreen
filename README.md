@@ -31,7 +31,9 @@ Em conformidade com as instruções recebidas e aderindo ao padrão TDD, inicial
     }
 
 
-## Identificando as falhas, foi elaborada a classe LoginScreen, empregando os métodos da LoginScreenTest, seguida pela realização de testes na referida classe.
+## Classe loginScreen
+
+Identificando as falhas, foi elaborada a classe LoginScreen, empregando os métodos da LoginScreenTest, seguida pela realização de testes na referida classe.
 
             package LoginScreenTest;
             
